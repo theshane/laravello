@@ -1,0 +1,29 @@
+services:
+        # The existing database container configuration...
+  php-apache:
+    container_name: php-apache
+    build:
+      context: .
+    ports:
+        - '8000:80'
+    volumes:
+      - ./src:/var/www/laravello
+      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    depends_on:
+      - database
+    
+  database:
+    container_name: database
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel
+      MYSQL_ROOT_PASSWORD: laravel
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - '3306:3306'
+
+  

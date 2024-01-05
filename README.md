@@ -21,6 +21,7 @@ https://github.com/theshane/laravello/blob/main/src/resources/views/fragments/da
 2. You will need to think about how you can make the JS more testable and maintainable if this were in a larger production application. 
 3. HTMX is pretty easy to use but there is a paradigm shift that will slow you down a bit if you are coming from React or Vue.
 4. I am not quite sure how I would handle calendars and other JS heavy components yet
+5. I like PHP, I am going to be honest. I always love coming back to it :)
 
  ## Misc notes
  Please do not confuse this for what I would consider production code it was just a toy and I may come back to add tests and stuff to make it a real portfolio project but I was just learning and wanted to keep it around in case I want to look at it in the future or it helps others.
